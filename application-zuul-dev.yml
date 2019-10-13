@@ -1,0 +1,17 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: AIQI-ZUUL
+
+zuul:
+  ignoredServices: '*' #只能通过路由访问，不能使用服务名访问
+  routes:
+    plat:
+      serviceId: AIQI-PLAT
+      path: /plat/**
+    product:
+      serviceId: AIQI-PRODUCT
+      path: /product/**
+  prefix: /services
