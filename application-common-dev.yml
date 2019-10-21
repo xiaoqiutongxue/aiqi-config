@@ -4,5 +4,7 @@ server:
 spring:
   application:
     name: AIQI-COMMON #服务名称
+  data: 
+    elasticsearch: cluster-nodes: localhost:9300
 
   
